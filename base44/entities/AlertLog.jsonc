@@ -1,0 +1,47 @@
+{
+  "name": "AlertLog",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "عنوان التنبيه",
+      "description": "نوع التنبيه أو عنوانه المختصر"
+    },
+    "body": {
+      "type": "string",
+      "title": "تفاصيل التنبيه",
+      "description": "وصف مختصر لما حدث"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "emergency",
+        "important",
+        "info"
+      ],
+      "default": "info",
+      "title": "مستوى الأولوية"
+    },
+    "icon": {
+      "type": "string",
+      "enum": [
+        "bus",
+        "mic",
+        "shield",
+        "sparkles",
+        "bell"
+      ],
+      "default": "bell",
+      "title": "الأيقونة"
+    },
+    "location": {
+      "type": "string",
+      "title": "الموقع",
+      "description": "مكان حدوث التنبيه"
+    }
+  },
+  "required": [
+    "title",
+    "level"
+  ]
+}
